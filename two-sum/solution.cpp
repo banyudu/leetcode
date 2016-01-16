@@ -5,16 +5,17 @@ public:
         int size = nums.size();
 		unordered_map<int, int> value2index;
 		int cur, another;
-		for (int i = 1; i <= size; i++)
+		for (int i = 0; i < size; i)
 		{
-			cur = nums[i - 1];
+			cur = nums[i++];
 			another = target - cur;
 			auto ptr = value2index.find(another);
 			if (ptr != value2index.end())
 			{
 				return vector<int>({ptr->second, i});
 			}
-			value2index[cur] = i;								
+			if (value2index.find(cur) == value2index.end())
+				value2index.insert({cur, i});
 		}
         return vector<int>();
     }
