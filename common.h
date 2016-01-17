@@ -9,6 +9,7 @@
 #include <unordered_set>
 #include <deque>
 #include <string>
+#include <cmath>
 
 using std::vector;
 using std::list;
@@ -23,3 +24,7 @@ using std::cout;
 using std::cerr;
 using std::endl;
 using std::string;
+using std::round;
+using std::lround;
+using std::llround;
+using std::fabs;
