@@ -9,11 +9,15 @@ public:
 		{
 			cur = nums[i++];
 			another = target - cur;
+
+			// find target - cur in hash
 			auto ptr = value2index.find(another);
 			if (ptr != value2index.end())
 			{
 				return vector<int>({ptr->second, i});
 			}
+
+			// store value in hash
 			if (value2index.find(cur) == value2index.end())
 				value2index.insert({cur, i});
 		}

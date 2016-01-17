@@ -6,8 +6,8 @@ public:
 		unordered_map<char, int> usedCharIndexes;
 		int ret = 0;
 		int size = s.size();
-		int begin = 1;
-		int last;
+		int begin = 1; // current substring begin position
+		int last; // last position for each char
 		char ch;
 		for (int i = 0; i < size;)
 		{

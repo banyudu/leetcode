@@ -2,8 +2,8 @@
 
 class Solution {
 public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-		int head, tail;
+    double findMedianSortedArrays(const vector<int>& nums1, const vector<int>& nums2) {
+		int head, tail; 
 		head = tail = 0;
 		int h1, h2, t1, t2; // head and tail indexes
 		h1 = h2 = 0;
@@ -25,11 +25,11 @@ public:
 			else
 			{
 				if (nums1[h1] < nums2[h2])
-					head = nums1[h1]++;
+					head = nums1[h1++];
 				else
 					head = nums2[h2++];
 				if (nums1[t1] > nums2[t2])
-					tail = nums2[t1--];
+					tail = nums1[t1--];
 				else
 					tail = nums2[t2--];
 			}
