@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <deque>
+#include <string>
 
 using std::vector;
 using std::list;
@@ -21,3 +22,4 @@ using std::cin;
 using std::cout;
 using std::cerr;
 using std::endl;
+using std::string;
