@@ -10,6 +10,7 @@
 #include <deque>
 #include <string>
 #include <cmath>
+#include <limits.h>
 
 using std::vector;
 using std::list;
