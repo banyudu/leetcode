@@ -28,4 +28,5 @@ TEST_CASE("negative values", "[Solution]")
 TEST_CASE("failed values from leetcode", "[Solution]")
 {
 	REQUIRE(sln.reverse(1534236469) == 0);
+	REQUIRE(sln.reverse(-1534236469) == 0);
 }

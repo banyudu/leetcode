@@ -29,3 +29,4 @@ using std::round;
 using std::lround;
 using std::llround;
 using std::fabs;
+using std::abs;
