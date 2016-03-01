@@ -11,10 +11,20 @@ public:
 		long long ret = 0;
 		int index = 0;
 		bool bNegative = false;
-		if ('+' == str[0] || '-' == str[0])
+		while (index < len)
 		{
-			index = 1;
-			bNegative = '-' == str[0];
+			char ch = str[index];
+			if (' ' == ch || '\t' == ch || '\n' == ch || '\r' == ch || '\f' == ch || '\v' == ch)
+				index++;
+			else
+				break;
+		}
+		if (index == len)
+			return error_value;
+
+		if ('+' == str[index] || '-' == str[index])
+		{
+			bNegative = '-' == str[index++];
 		}
 
 		// loop through index to len
@@ -26,8 +36,12 @@ public:
 				return bNegative? -ret: ret;
 			ret *= 10;
 			ret += v;
-			if (ret > INT_MAX)
-				return error_value;
+			//if ((bNegative && -ret < INT_MIN) || (!bNegative && ret > INT_MAX))
+			//return error_value;
+			if (bNegative && -ret < INT_MIN)
+				return INT_MIN;
+			if (!bNegative && ret > INT_MAX)
+				return INT_MAX;
 		}
 		return bNegative? -ret: ret;
     }
