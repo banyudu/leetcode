@@ -11,6 +11,7 @@
 #include <string>
 #include <cmath>
 #include <limits.h>
+#include <stack>
 
 using std::vector;
 using std::list;
@@ -33,3 +34,4 @@ using std::abs;
 using std::stoi;
 using std::min;
 using std::max;
+using std::stack;
