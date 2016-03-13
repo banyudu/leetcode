@@ -2,7 +2,7 @@
 
 require 'rake'
 require 'uri'
-require 'FileUtils'
+require 'fileutils'
 
 task :solution do
   url = ENV["url"]
@@ -10,7 +10,7 @@ task :solution do
   basename = File.basename(uri.path)
 
   # copy templates of test.cpp and solution.cpp
-  FileUtils.cp("template", basename)
+  FileUtils.cp_r("template", basename)
 
   # change directory
   Dir.chdir(basename)
