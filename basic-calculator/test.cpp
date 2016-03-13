@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_COLOUR_NONE
-#include <catch.hpp>
+#include "../catch.hpp"
 #include "solution.cpp"
 
 Solution sln;
@@ -44,4 +44,9 @@ TEST_CASE("invalid input", "[Solution]")
 	REQUIRE(sln.calculate("(1+1") == INVALID_RESULT);
 	REQUIRE(sln.calculate(")1+1") == INVALID_RESULT);
 	REQUIRE(sln.calculate(",1+1") == INVALID_RESULT);
+}
+
+TEST_CASE("failed cases from leetcode", "[Solution]")
+{
+	REQUIRE(sln.calculate("2-4-(8+2-6+(8+4-(1)+8-10))") == -15);
 }
