@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# os x files
+*.plist
+*.dSYM
