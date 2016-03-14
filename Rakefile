@@ -16,5 +16,5 @@ task :solution do
   Dir.chdir(basename)
 
   # create file link.url
-  File.open("link.url", 'w') { |file| file.write(uri.path) }
+  File.open("link.url", 'w') { |file| file.write(url) }
 end
