@@ -2,7 +2,7 @@
 class Solution {
 public:
 	string intToRoman(int num) {
-		const vector<vector<string>> romanValues =
+		const static vector<vector<string>> romanValues =
 			{
 				{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
 				{"X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
