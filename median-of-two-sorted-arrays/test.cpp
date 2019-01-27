@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_COLOUR_NONE
-#include <catch.hpp>
+#include "../catch.hpp"
 #include "solution.cpp"
 
 bool equal(double v1, double v2)
