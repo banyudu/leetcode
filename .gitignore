@@ -30,3 +30,6 @@
 # os x files
 *.plist
 *.dSYM
+
+# vscode files
+.vscode
