@@ -12,6 +12,7 @@
 #include <cmath>
 #include <limits.h>
 #include <stack>
+#include <utility>
 
 using std::vector;
 using std::list;
@@ -35,3 +36,4 @@ using std::stoi;
 using std::min;
 using std::max;
 using std::stack;
+using std::pair;
