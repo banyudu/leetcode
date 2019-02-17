@@ -53,6 +53,14 @@ class Utils
         return leftStr == rightStr;
     }
 
+    static bool isEqual(const vector<int> &left, const vector<int> &right)
+    {
+        // convert to string
+        string leftStr = Utils::vector2SortedString(left);
+        string rightStr = Utils::vector2SortedString(right);
+        return leftStr == rightStr;
+    }
+
     static bool isEqual(vector<string> left, vector<string> right)
     {
         // convert to string
