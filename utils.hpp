@@ -1,6 +1,9 @@
+#ifndef _UTILS_HPP_
+#define _UTILS_HPP_
+
 #include <iostream>
 #include <algorithm>
-using namespace std;
+#include "common.h"
 
 class Utils
 {
@@ -71,4 +74,30 @@ class Utils
         }
         return true;
     }
+
+    static bool isEqual(ListNode* left, ListNode* right)
+    {
+        if (!left && !right) {
+            return true;
+        }
+
+        if (!left || !right || left->val != right->val) {
+            return false;
+        }
+
+        return Utils::isEqual(left->next, right->next);
+    }
+
+    static ListNode* getList(vector<int> numbers) {
+        // do not care memory leak
+        ListNode* result = nullptr;
+        for (int i = numbers.size() - 1; i >= 0; i--) {
+            ListNode* tmp = new ListNode(numbers[i]);
+            tmp->next = result;
+            result = tmp;
+        }
+        return result;
+    }
 };
+
+#endif

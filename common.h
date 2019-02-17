@@ -1,3 +1,6 @@
+#ifndef _COMMON_H_
+#define _COMMON_H_
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -37,3 +40,13 @@ using std::min;
 using std::max;
 using std::stack;
 using std::pair;
+using std::to_string;
+
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+#endif
