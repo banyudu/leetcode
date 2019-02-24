@@ -28,6 +28,16 @@ class Utils
         return result.size() ? result.substr(0, result.size() - 1) : "";
     }
 
+    static string join(ListNode *head)
+    {
+        vector<string> strVec;
+        while (head) {
+            strVec.push_back(to_string(head->val));
+            head = head->next;
+        }
+        return Utils::join(strVec);
+    }
+
     static string vector2SortedString(vector<int> vec)
     {
         sort(vec.begin(), vec.end());
