@@ -41,6 +41,7 @@ using std::max;
 using std::stack;
 using std::pair;
 using std::to_string;
+using std::find;
 
 struct ListNode
 {
