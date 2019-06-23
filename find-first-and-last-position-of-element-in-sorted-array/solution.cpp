@@ -3,6 +3,9 @@
 class Solution {
 public:
     vector<int> searchRange(const vector<int>& nums, int target) {
+        if (!nums.size()) {
+            return { -1, -1 };
+        }
         int left = 0;
         int right = nums.size() - 1;
         if (nums[left] == target || nums[right] == target) {
