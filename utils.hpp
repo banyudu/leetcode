@@ -60,6 +60,10 @@ class Utils
         // convert to string
         string leftStr = Utils::vector2SortedString(left);
         string rightStr = Utils::vector2SortedString(right);
+        if (leftStr != rightStr) {
+            cout << "left: " << leftStr << endl;
+            cout << "right: " << rightStr << endl;
+        }
         return leftStr == rightStr;
     }
 
